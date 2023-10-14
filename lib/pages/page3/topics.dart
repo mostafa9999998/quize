@@ -20,8 +20,10 @@ class Topics extends StatelessWidget {
        // height: 250,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
+              padding: EdgeInsets.all(7),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
                 color: Color(0xffFEF0C7)
