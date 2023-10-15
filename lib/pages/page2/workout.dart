@@ -3,7 +3,7 @@ import 'package:qize/pages/page2/programs.dart';
 
 class Workout extends StatelessWidget {
 
-
+//String s = Text('data',style: TextStyle(color: Colors.black),) as String ;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -113,33 +113,73 @@ class Workout extends StatelessWidget {
             ),),
           ],),
           SizedBox(height: 20,),
-         /* Row(
-            children: [
-              TabBar(controller: ,
-                  tabs:[
-                    Tab(
-                      text: 'All Type',
-                    ),
-                    Tab(
-                      text: 'Full Body',
-                    ),
-                    Tab(
-                      text: 'Upper',
-                    ),
-                    Tab(
-                      text: 'Lower',
-                    )
-                  ]
-              )
-            ],
-          ),
-          SizedBox(height: 20,),*/
-          Programs(text1: '7days', text2: 'Morning Yoga', text3: 'Improve mental Focuse.', path: 'assets/removal 2.png'),
-          SizedBox(height: 20,),
-          Programs(text1: '3days', text2: 'Plank Exercise', text3: 'Improve posture and stability.', path: 'assets/pngwing 1.png'),
-
+          _tabSection(),
         ],
       ),
     );
   }
+}
+Widget _tabSection() {
+  return DefaultTabController(
+    length: 4,
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+
+      children: <Widget>[
+        Container(
+          child: TabBar(
+              labelColor: Colors.black,
+              tabs: [
+            Tab(text: "All Type"),
+            Tab(text: "FullBody"),
+            Tab(text: "Upper"),
+            Tab(text: "Lower"),
+          ]),
+        ),
+        SizedBox(height: 10,),
+       Container(
+         height:380 ,
+          width: 350,
+          child: TabBarView(children: [
+            Container(
+              child: Column(
+                children: [
+                  Programs(text1: '7days', text2: 'Morning Yoga', text3: 'Improve mental Focuse.', path: 'assets/removal 2.png'),
+                  SizedBox(height: 20,),
+                  Programs(text1: '3days', text2: 'Plank Exercise', text3: 'Improve posture and stability.', path: 'assets/pngwing 1.png'),
+                ],
+              )
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Programs(text1: '5days', text2: 'Morning Yoga', text3: 'Improve mental Focuse.', path: 'assets/removal 2.png'),
+                  SizedBox(height: 20,),
+                  Programs(text1: '3days', text2: 'Plank Exercise', text3: 'Improve posture and stability.', path: 'assets/pngwing 1.png'),
+                ],
+              )
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Programs(text1: '4days', text2: 'Morning Yoga', text3: 'Improve mental Focuse.', path: 'assets/removal 2.png'),
+                  SizedBox(height: 20,),
+                  Programs(text1: '4days', text2: 'Plank Exercise', text3: 'Improve posture and stability.', path: 'assets/pngwing 1.png'),
+                ],
+              )
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Programs(text1: '6days', text2: 'Morning Yoga', text3: 'Improve mental Focuse.', path: 'assets/removal 2.png'),
+                  SizedBox(height: 20,),
+                  Programs(text1: '4days', text2: 'Plank Exercise', text3: 'Improve posture and stability.', path: 'assets/pngwing 1.png'),
+                ],
+              )
+            ),
+          ]),
+        ),
+      ],
+    ),
+  );
 }

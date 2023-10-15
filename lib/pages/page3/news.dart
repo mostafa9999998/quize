@@ -42,41 +42,45 @@ class _NewsscreenState extends State<Newsscreen> {
               )
             ],
           ),
-         /* SizedBox(height: 10,),
+          SizedBox(height: 10,),
           Row(children: [
-            ChoiceChip(label:Text('Discover'),
+            FilterChip(label:Text('Discover'),
                 selected:chip1,
               selectedColor: Color(0xffD6BBFB),
               onSelected: (newvalue){
               chip1=newvalue;
               setState(() {});
               },
+              showCheckmark: false,
             ),
-            ChoiceChip(label:Text('News'),
+            FilterChip(label:Text('News'),
               selected:chip2,
               selectedColor: Color(0xffD6BBFB),
               onSelected: (newvalue){
                 chip2=newvalue;
                 setState(() {});
               },
+              showCheckmark: false,
             ),
-            ChoiceChip(label:Text('Most Viewed'),
+            FilterChip(label:Text('Most Viewed'),
               selected:chip3,
               selectedColor: Color(0xffD6BBFB),
               onSelected: (newvalue){
                 chip3=newvalue;
                 setState(() {});
               },
+              showCheckmark: false,
             ),
-            ChoiceChip(label:Text('Saved'),
+            FilterChip(label:Text('Saved'),
               selected:chip4,
               selectedColor: Color(0xffD6BBFB),
               onSelected: (newvalue){
                 chip4=newvalue;
                 setState(() {});
               },
+              showCheckmark: false,
             ),
-          ],),*/
+          ],),
           SizedBox(height: 20,),
           Row(
             children: [
@@ -110,6 +114,8 @@ class _NewsscreenState extends State<Newsscreen> {
           ),
           SizedBox(height: 15,),
           Container(
+            height:160 ,
+            width: 340,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: Color(0xffE4E7EC)),
@@ -117,21 +123,21 @@ class _NewsscreenState extends State<Newsscreen> {
               children: [
                 Image(image: AssetImage('assets/Doctor-PNG-Images 1.png')),
                 Container(
-                  margin: EdgeInsets.all(30),
+                  margin: EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
-                     width: 140,
-                    height: 150,
+                     width: 152,
+                    height: 130,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Connect with doctors & get suggestions',
                           style:
-                              TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                              TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         Text(
                           'Connect now and get expert insights',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(fontSize: 16),
                         ),
                         Expanded(
                           child: ElevatedButton(
@@ -149,7 +155,7 @@ class _NewsscreenState extends State<Newsscreen> {
               ],
             ),
           ),
-          SizedBox(height: 20,),
+         // SizedBox(height: 10,),
           Row(
             children: [
               Text(

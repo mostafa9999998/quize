@@ -16,8 +16,6 @@ class Topics extends StatelessWidget {
           fit: BoxFit.cover),
       ),
       child:Container(
-        //width: 150,
-       // height: 250,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
